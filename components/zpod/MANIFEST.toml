@@ -1,0 +1,6 @@
+[Defaults]
+domain = "test.example.com"
+
+
+[[Services]]
+Service = "caddy.service"
