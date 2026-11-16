@@ -1,7 +1,7 @@
 [Defaults]
 domain = "test.example.com"
 pod = "443"
-
+containerTag = "latest"
 
 [[Services]]
 Service = "caddy.service"
