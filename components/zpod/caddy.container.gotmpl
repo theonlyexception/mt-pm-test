@@ -1,0 +1,21 @@
+[Unit]
+Description=Caddy reverse proxy
+
+[Container]
+Image=docker.io/caddy:{{ .containerTag }}
+ContainerName=caddy
+AddCapability=NET_ADMIN
+Volume=caddy-data.volume:/data
+Volume=caddy-config.volume:/config
+Volume={{ m_dataDir "zpod" }}/conf:/etc/caddy:Z
+
+
+PublishPort={{ .port }}:443
+
+
+[Service]
+ExecReload=podman exec caddy caddy reload --config /etc/caddy/Caddyfile
+
+[Install]
+# Start by default on boot
+WantedBy=multi-user.target default.target
