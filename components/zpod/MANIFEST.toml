@@ -5,4 +5,4 @@ containerTag = "latest"
 myName = "Default Name"
 
 [[Services]]
-Service = "zpod.service"
+Service = "caddy.service"
