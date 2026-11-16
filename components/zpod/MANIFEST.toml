@@ -2,6 +2,7 @@
 domain = "test.example.com"
 pod = "443"
 containerTag = "latest"
+myName = "Default Name"
 
 [[Services]]
 Service = "caddy.service"
