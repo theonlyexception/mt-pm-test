@@ -1,6 +1,6 @@
 [Defaults]
 domain = "test.example.com"
-pod = "443"
+port = "443"
 containerTag = "latest"
 myName = "Default Name"
 
